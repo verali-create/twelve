@@ -1,0 +1,41 @@
+{
+  "manifest_version": 3,
+  "name": "twelve",
+  "description": "Drag-to-select text simplifier and learning companion.",
+  "version": "0.1.0",
+  "permissions": [
+    "scripting",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "contentScript.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "commands": {
+    "twelve-start-selection": {
+      "suggested_key": {
+        "default": "Alt+S",
+        "mac": "Command+Shift+2"
+      },
+      "description": "Start twelve drag-to-select capture"
+    }
+  },
+  "action": {
+    "default_title": "twelve"
+  }
+}
+

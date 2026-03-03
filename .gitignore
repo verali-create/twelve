@@ -1,0 +1,23 @@
+# Chrome extension
+*.crx
+*.pem
+.DS_Store
+
+# Node modules (if you add build tools later)
+node_modules/
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment variables
+.env
+.env.local
